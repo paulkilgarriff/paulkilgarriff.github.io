@@ -3,118 +3,486 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robert Goodhead's Personal Page</title>
+    <title>Paul Kilgarriff, Ph.D.</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f0f4f8;
+            background-color: #f3f4f6;
+            color: #1f2937;
         }
-        .nav-item {
-            @apply px-4 py-2 rounded-md hover:bg-gray-200 transition-colors duration-200;
+        .container {
+            max-width: 80rem;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 70%;
+            height: 4px;
+            background-color: #3b82f6;
+            border-radius: 9999px;
+        }
+        .link-icon {
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.25rem;
+        }
+        ul.list-disc-inside li::marker {
+          color: #3b82f6;
+        }
+        .tab-button {
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            border-radius: 0.5rem 0.5rem 0 0;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            color: #4b5563;
+        }
+        .tab-button.active {
+            background-color: #fff;
+            color: #1f2937;
+            border-bottom: 4px solid #3b82f6;
+        }
+        .tab-button:not(.active):hover {
+            background-color: #e5e7eb;
+        }
+        ul.no-style {
+            list-style: none;
+            padding-left: 0;
         }
     </style>
 </head>
-<body class="antialiased text-gray-800">
+<body class="bg-gray-100 flex justify-center py-10">
 
-    <!-- Header and Navigation -->
-    <header class="bg-white shadow-md">
-        <div class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
-            <h1 class="text-xl font-bold text-gray-900 mb-2 sm:mb-0">John Smith</h1>
-            <nav class="flex space-x-2 sm:space-x-4 text-sm font-medium">
-                <a href="#about" class="nav-item">About</a>
-                <a href="#research" class="nav-item">Research</a>
-                <a href="#publications" class="nav-item">Publications</a>
-                <a href="#cv" class="nav-item">CV</a>
-                <a href="#contact" class="nav-item">Contact</a>
-            </nav>
+<main class="container bg-white shadow-xl rounded-2xl p-8 lg:p-12">
+    <!-- Header and Contact Info -->
+    <header class="text-center md:flex md:justify-between md:items-center md:text-left mb-8 md:mb-12">
+        <div>
+            <h1 class="text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">Paul Kilgarriff, Ph.D.</h1>
+            <p class="text-xl text-gray-600 mt-2">Economist | Data & Policy Analyst</p>
+        </div>
+        <div class="mt-6 md:mt-0 text-gray-500">
+            <div class="flex items-center justify-center md:justify-end mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <span>Dublin, Ireland</span>
+            </div>
+            <div class="flex items-center justify-center md:justify-end mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <a href="mailto:p.kilgarriff1@gmail.com" class="hover:text-blue-500 transition-colors">p.kilgarriff1@gmail.com</a>
+            </div>
+            <div class="flex items-center justify-center md:justify-end mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4.32 8.78c-.28 0-.5.23-.5.5v2.5c0 .28.22.5.5.5s.5-.22.5-.5v-2.5c0-.27-.22-.5-.5-.5zm-4.18.5c-.27 0-.5.22-.5.5v2.5c0 .28.23.5.5.5s.5-.22.5-.5v-2.5c0-.28-.23-.5-.5-.5zm2.09 3.01c-.13-.26-.13-.57 0-.83.2-.4.49-.72.82-.96.34-.23.75-.36 1.17-.36.42 0 .83.13 1.17.36.33.24.62.56.82.96.13.26.13.57 0 .83l-1.57 3.14c-.1.2-.26.37-.45.48-.19.12-.4.18-.62.18-.22 0-.44-.06-.62-.18-.19-.11-.35-.28-.45-.48l-1.57-3.14zM16 11H8V9h8v2z"/></svg>
+                <a href="https://linkedin.com/in/paul-kilgarriff-48805548" class="hover:text-blue-500 transition-colors">paul-kilgarriff-48805548</a>
+            </div>
         </div>
     </header>
 
-    <div class="container mx-auto px-4 py-8 sm:px-6 lg:px-8 max-w-4xl">
-
-        <!-- Main Content Section -->
-        <main class="space-y-12">
-
-            <!-- About Section -->
-            <section id="about" class="bg-white p-6 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold mb-4">About Me</h2>
-                <div class="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
-                    <img src="https://placehold.co/150x150/9ca3af/ffffff?text=JS" alt="John Smith" class="rounded-full w-24 h-24 sm:w-36 sm:h-36 object-cover shadow-inner">
-                    <p class="text-gray-700 text-base leading-relaxed text-center sm:text-left">
-                        Hello! My name is John Smith and I am a final-year Ph.D. student in the Department of Computer Science at a prestigious university. My research interests are primarily focused on the intersection of artificial intelligence and robotics, with a special emphasis on <span class="font-semibold text-gray-900">learning-based control systems</span> for autonomous agents.
-                    </p>
-                </div>
-                <div class="mt-4 text-gray-700 text-base leading-relaxed">
-                    <p class="mb-2">
-                        Before starting my Ph.D., I completed my Master of Science in Robotics from another top university. I have a passion for building systems that can interact with the physical world in a safe and intelligent manner.
-                    </p>
-                    <p>
-                        When I'm not in the lab, I enjoy hiking, playing chess, and contributing to open-source projects.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Research Section -->
-            <section id="research" class="bg-white p-6 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold mb-4">Research</h2>
-                <div class="space-y-6">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2">Learning-based Control for Soft Robots</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            This project explores novel methods for controlling highly deformable soft robots using deep reinforcement learning. We are developing a simulation environment to test our algorithms before deploying them on physical hardware.
-                        </p>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2">Multi-Agent Path Planning</h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            My work on this topic involves creating efficient and collision-free path-planning algorithms for large swarms of robots. Our approach utilizes a decentralized architecture to improve scalability.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Publications Section -->
-            <section id="publications" class="bg-white p-6 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold mb-4">Publications</h2>
-                <ul class="list-disc list-inside space-y-2 text-gray-700 leading-relaxed">
-                    <li><span class="font-semibold">Smith, J.</span>, & Doe, R. (2023). "Autonomous Control of Deformable Robots." <span class="italic">Journal of Robotics Research, 42</span>(3), 123-145.</li>
-                    <li>Brown, A., <span class="font-semibold">Smith, J.</span>, & Davis, C. (2022). "Decentralized Path Planning for Multi-Robot Systems." <span class="italic">IEEE Transactions on Robotics, 38</span>(1), 56-78.</li>
-                </ul>
-            </section>
-
-            <!-- CV Section (as a link) -->
-            <section id="cv" class="bg-white p-6 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold mb-4">CV</h2>
-                <p class="text-gray-700 leading-relaxed">
-                    You can download my full Curriculum Vitae here:
-                    <a href="#" class="text-blue-600 hover:underline font-semibold transition-colors duration-200" download>Download CV (PDF)</a>
-                </p>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact" class="bg-white p-6 rounded-lg shadow-md">
-                <h2 class="text-3xl font-bold mb-4">Contact</h2>
-                <p class="text-gray-700 leading-relaxed">
-                    Feel free to get in touch with me via email or connect with me on LinkedIn.
-                </p>
-                <ul class="mt-4 space-y-2">
-                    <li class="flex items-center space-x-2 text-gray-700">
-                        <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
-                        <a href="mailto:john.smith@example.edu" class="text-blue-600 hover:underline">john.smith@example.edu</a>
-                    </li>
-                    <li class="flex items-center space-x-2 text-gray-700">
-                        <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.768s.784-1.767 1.75-1.767 1.75.79 1.75 1.767-.783 1.768-1.75 1.768zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                        <a href="#" class="text-blue-600 hover:underline">LinkedIn Profile</a>
-                    </li>
-                </ul>
-            </section>
-
-        </main>
+    <!-- Navigation Tabs -->
+    <div class="flex border-b-2 border-gray-300 mb-8">
+        <button class="tab-button active" onclick="showTab('homeTabContent')">Home</button>
+        <button class="tab-button" onclick="showTab('cvTabContent')">CV</button>
+        <button class="tab-button" onclick="showTab('researchTabContent')">Research</button>
     </div>
+
+    <!-- Home Tab Content -->
+    <div id="homeTabContent">
+        <div class="space-y-8">
+            <section>
+                <h2 class="section-title text-2xl font-bold text-gray-900 mb-4">Research Overview</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    My research focuses on the intersection of economics, geography, and data science. I use robust data insights and interdisciplinary approaches to analyze complex, evolving environments. Key areas of interest include the impacts of teleworking on urban structures, spatial analysis of housing and income inequality, and using big data to inform economic policy, especially in the context of financial resilience and climate-related risks.
+                </p>
+            </section>
+            
+            <section>
+                <h2 class="section-title text-2xl font-bold text-gray-900 mb-4">Featured Publications</h2>
+                <ul class="space-y-4 text-gray-700">
+                    <li><a href="#" class="hover:text-blue-500 font-semibold transition-colors">"Price, Size and Density: Dublin housing in an EU context"</a>, Statistical and Social Inquiry Society of Ireland (2022). Awarded the Barrington Medal.</li>
+                    <li><a href="#" class="hover:text-blue-500 font-semibold transition-colors">"The scaling of urban land and density profiles"</a>, Journal Urban Scaling: Allometry in Urban Studies and Spatial Science (2024).</li>
+                    <li><a href="#" class="hover:text-blue-500 font-semibold transition-colors">"Assessing the Impact of Mobility on COVID-19: Spatial Evidence from Ireland"</a>, The Economic and Social Review (2023).</li>
+                    <li><a href="#" class="hover:text-blue-500 font-semibold transition-colors">"The effect of Land Fragmentation on the Technical Inefficiency of Dairy Farms"</a>, Journal of Agricultural Economics (2020).</li>
+                    <li><a href="#" class="hover:text-blue-500 font-semibold transition-colors">"The impact of a flooding disruption on the spatial distribution of commuter's income"</a>, Journal of Environmental Economics and Policy (2019).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="section-title text-2xl font-bold text-gray-900 mb-4">Featured Talk</h2>
+                <div class="aspect-w-16 aspect-h-9 w-full max-w-2xl mx-auto rounded-lg overflow-hidden shadow-lg">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/NCW0THPwQ0w?si=m5l9QY7t-0GqP_Xw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- CV Tab Content -->
+    <div id="cvTabContent" class="hidden">
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Sidebar -->
+            <aside class="lg:col-span-1 space-y-8">
+                <!-- About Me -->
+                <section>
+                    <h2 class="section-title text-xl font-bold text-gray-900 mb-4">About Me</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        I am an economist with an interdisciplinary background in economics and geography, bringing a proven track record in research, policy analysis, and financial resilience. As Principal Investigator, I secured €554k in funding to lead a project on the impacts of teleworking on commuting patterns and housing prices across European cities. In 2022 I was awarded the Barrington Medal by the Statistical and Social Inquiry Society of Ireland for my paper on "Price, Size and Density: Dublin housing in an EU context". My work is driven by a commitment to using robust data insights to inform policy and economic strategy in complex, evolving environments.
+                    </p>
+                </section>
+
+                <!-- Strengths -->
+                <section>
+                    <h2 class="section-title text-xl font-bold text-gray-900 mb-4">Strengths</h2>
+                    <ul class="list-disc-inside text-gray-700 columns-2 md:columns-3 lg:columns-2">
+                        <li>Problem solving</li>
+                        <li>Learning</li>
+                        <li>Data Communication</li>
+                        <li>Leadership</li>
+                        <li>Planning</li>
+                        <li>Attention to detail</li>
+                        <li>Project management</li>
+                        <li>Grant writing</li>
+                        <li>Time management</li>
+                        <li>Team work</li>
+                        <li>Writing</li>
+                        <li>Policy</li>
+                        <li>Spatial</li>
+                        <li>Research</li>
+                        <li>Innovation</li>
+                        <li>Interdisciplinary</li>
+                        <li>Optimistic</li>
+                        <li>Enthusiastic</li>
+                        <li>Positive</li>
+                        <li>Adaptable</li>
+                    </ul>
+                </section>
+
+                <!-- Technical Skills -->
+                <section>
+                    <h2 class="section-title text-xl font-bold text-gray-900 mb-4">Technical Skills</h2>
+                    <ul class="list-disc-inside text-gray-700 columns-2 md:columns-3 lg:columns-2">
+                        <li>R, STATA</li>
+                        <li>ArcGIS, QGIS</li>
+                        <li>Python, Excel, Access</li>
+                        <li>LaTeX</li>
+                        <li>Web scraping, SQL</li>
+                        <li>Spatial analysis, Mapping</li>
+                        <li>Machine learning, NLP</li>
+                        <li>Data visualization</li>
+                        <li>Network analysis</li>
+                        <li>Spatial regression</li>
+                        <li>Big Data, Clustering</li>
+                        <li>Text Mining</li>
+                        <li>APIs (Google, OpenAI)</li>
+                    </ul>
+                </section>
+
+                <!-- Languages -->
+                <section>
+                    <h2 class="section-title text-xl font-bold text-gray-900 mb-4">Languages</h2>
+                    <ul class="no-style text-gray-700 space-y-2">
+                        <li><span class="font-semibold text-gray-900">English:</span> Native</li>
+                        <li><span class="font-semibold text-gray-900">French:</span> Basic / A2.2</li>
+                    </ul>
+                </section>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lg:col-span-2 space-y-12">
+                <!-- Experience -->
+                <section>
+                    <h2 class="section-title text-2xl font-bold text-gray-900 mb-6">Experience</h2>
+                    <ul class="space-y-6">
+                        <!-- Economist | Central Bank of Ireland -->
+                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-gray-800">Economist | Macro-Financial Division | Central Bank of Ireland</h3>
+                                <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Sept. 2023 - Present</span>
+                            </div>
+                            <p class="text-gray-600 mb-2">Dublin, Ireland</p>
+                            <ul class="list-disc-inside text-gray-700 space-y-1">
+                                <li>Economist working in the area of financial resilience and research.</li>
+                                <li>Leading internal research and analysis of residential loan level data.</li>
+                                <li>Active member of the ECB's expert group on climate physical risks, collaborating on initiatives to assess and mitigate climate-related financial risks.</li>
+                                <li>Contribute to publication of the Financial Stability Review.</li>
+                                <li>Provide input to management in relation to housing, affordability and mortgage book.</li>
+                            </ul>
+                        </li>
+
+                        <!-- Principal Investigator | Luxembourg Institute of Socio-Economic Research -->
+                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-gray-800">Principal Investigator | Urban Mobility and Development | Luxembourg Institute of Socio-Economic Research</h3>
+                                <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Sept. 2022 - Aug. 2023</span>
+                            </div>
+                            <p class="text-gray-600 mb-2">Belval, Luxembourg</p>
+                            <ul class="list-disc-inside text-gray-700 space-y-1">
+                                <li>PI on a €554k project TELE-SIM.</li>
+                                <li>Researched the local impact on teleworking on 500 European cities.</li>
+                                <li>Modelling house prices for several countries and over 500 cities.</li>
+                                <li>Linking city size effects and rent price gradients.</li>
+                                <li>Estimating commuting costs across 500 cities.</li>
+                                <li>Lead scientific contact for the department research seminar series. Contributed in receiving €30k for the series and also inviting high-profile speakers.</li>
+                            </ul>
+                        </li>
+
+                        <!-- Economic Consultant | OECD -->
+                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-gray-800">Economic Consultant | Organisation for Economic Co-operation and Development (OECD)</h3>
+                                <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Oct. 2021 - Dec. 2022</span>
+                            </div>
+                            <p class="text-gray-600 mb-2">Paris, France</p>
+                            <ul class="list-disc-inside text-gray-700 space-y-1">
+                                <li>Utilised big data to estimate risk preferences to natural disasters in Asia.</li>
+                                <li>Used web-scraping to build a large scale database of over 5 million news articles.</li>
+                                <li>Performed text mining and sentiment analysis to examine the severity of natural disasters.</li>
+                                <li>Created a methodology to allow for a fast estimate on economic damages from a natural disaster using a text mining and sentiment analysis approach.</li>
+                                <li>Future research project to examine the socio-demographics of natural disasters in the region of south Asia.</li>
+                            </ul>
+                        </li>
+
+                        <!-- Economist | Glenveagh Properties Plc. -->
+                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-gray-800">Economist | Glenveagh Properties Plc.</h3>
+                                <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Sept. 2021 - June 2022</span>
+                            </div>
+                            <p class="text-gray-600 mb-2">Maynooth, Co. Kildare, Ireland</p>
+                            <ul class="list-disc-inside text-gray-700 space-y-1">
+                                <li>Worked as part of the planning team with a particular focus on future planning and demographics.</li>
+                                <li>Contributed to analysis examining compact growth and housing viability.</li>
+                                <li>Produced research for management on the future housing needs and demographic projections to 2040.</li>
+                                <li>Conducted a detailed analysis of service provision for 800 Irish settlements.</li>
+                                <li>Examined the spatial viability of different housing typologies.</li>
+                                <li>Produced a dashboard for the acquisitions team in relation to affordability and incomes by area.</li>
+                                <li>Contributed to internal reports and documents with a focus on hedonic prices of property.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                
+                <!-- Education -->
+                <section>
+                    <h2 class="section-title text-2xl font-bold text-gray-900 mb-6">Education</h2>
+                    <ul class="space-y-6">
+                        <!-- PhD -->
+                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-gray-800">Ph.D. Geocomputation | Maynooth University</h3>
+                                <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Sept. 2013 - Nov. 2017</span>
+                            </div>
+                            <p class="text-gray-600 mb-2">Maynooth, Ireland</p>
+                            <p class="text-gray-700 leading-relaxed italic">Title: "The spatial distribution of welfare in Ireland"</p>
+                            <ul class="list-disc-inside text-gray-700 mt-2 space-y-1">
+                                <li>Economics, geography, data analysis, GIS.</li>
+                                <li>Created economic models to examine income, inequality, housing and commuting across Ireland.</li>
+                                <li>Simulated income, housing costs and benefits at the individual and household level.</li>
+                                <li>Performed network analysis to calculate travel and journey times for 3,440 areas.</li>
+                            </ul>
+                        </li>
+
+                        <!-- M.Econ.Sc. -->
+                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-gray-800">M.Econ.Sc. | National University of Ireland, Galway</h3>
+                                <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Aug. 2010 - Aug. 2011</span>
+                            </div>
+                            <p class="text-gray-600 mb-2">Galway, Ireland</p>
+                            <ul class="list-disc-inside text-gray-700 space-y-1">
+                                <li>Result 1.1</li>
+                                <li>Microeconomics, macroeconomics, game theory, econometrics, economic thought.</li>
+                            </ul>
+                        </li>
+                        
+                        <!-- B.Comm -->
+                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-gray-800">B.Comm | National University of Ireland, Galway</h3>
+                                <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Sept. 2007 - May 2010</span>
+                            </div>
+                            <p class="text-gray-600 mb-2">Galway, Ireland</p>
+                            <ul class="list-disc-inside text-gray-700 space-y-1">
+                                <li></li>
+                                <li>Microeconomics, macroeconomics, game theory, econometrics, marketing.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Research Tab Content -->
+    <div id="researchTabContent" class="hidden">
+        <div class="space-y-12">
+            <!-- Publications -->
+            <section>
+                <h2 class="section-title text-2xl font-bold text-gray-900 mb-6">Peer-reviewed Publications</h2>
+                <ul class="space-y-4">
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">Evaluating cropping intensity in registered and unregistered farms: Evidence from Kenya.</p>
+                        <p class="text-sm text-gray-600"><em>Remote Sensing Applications: Society and Environment</em>, 2024. <a href="#" class="text-blue-500 hover:underline">[paper link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">The scaling of urban land and density profiles.</p>
+                        <p class="text-sm text-gray-600"><em>Journal Urban Scaling: Allometry in Urban Studies and Spatial Science</em>, 2024. <a href="#" class="text-blue-500 hover:underline">[paper link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">Assessing the Impact of Mobility on COVID-19: Spatial Evidence from Ireland.</p>
+                        <p class="text-sm text-gray-600"><em>The Economic and Social Review</em>, 2023. <a href="#" class="text-blue-500 hover:underline">[paper link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">On the heterogeneity of urban expansion profiles in Europe.</p>
+                        <p class="text-sm text-gray-600"><em>arXiv</em>, 2022. <a href="#" class="text-blue-500 hover:underline">[paper link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">Price, Size and Density: Dublin housing in an EU context.</p>
+                        <p class="text-sm text-gray-600"><em>Statistical and Social Inquiry Society of Ireland</em>, 2022. <a href="#" class="text-blue-500 hover:underline">[paper link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">Trends and influential factors of high ecological status mobility in Irish Rivers.</p>
+                        <p class="text-sm text-gray-600"><em>Science of the Total Environment</em>, 2022. <a href="#" class="text-blue-500 hover:underline">[paper link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">Change in Artificial Land Use over time across European Cities: A rescaled radial perspective.</p>
+                        <p class="text-sm text-gray-600"><em>Entropy, Complexity and Spatial Dynamics: The Rebirth of Theory?</em>, 2021. <a href="#" class="text-blue-500 hover:underline">[paper link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">The Effect of Land Fragmentation on the Technical Inefficiency of Dairy Farms.</p>
+                        <p class="text-sm text-gray-600"><em>Journal of Agricultural Economics</em>, 2020. <a href="#" class="text-blue-500 hover:underline">[paper link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">A Spatial Analysis of Disposable Income and Poverty in Ireland: A GWR Approach.</p>
+                        <p class="text-sm text-gray-600"><em>arXiv</em>, 2020. <a href="#" class="text-blue-500 hover:underline">[paper link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">Assessing population landscape characteristic preferences using disaggregated attributes for agricultural and rural landscapes.</p>
+                        <p class="text-sm text-gray-600"><em>Bio-based and Applied Economics</em>, 2020. <a href="#" class="text-blue-500 hover:underline">[paper link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">Livestock Exclusion from Watercourses: Policy Effectiveness and Implications.</p>
+                        <p class="text-sm text-gray-600"><em>Environmental Science and Policy, Elsevier</em>, 2020. <a href="#" class="text-blue-500 hover:underline">[paper link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">The impact of housing consumption value on the spatial distribution of welfare.</p>
+                        <p class="text-sm text-gray-600"><em>Journal of Housing Economics, Elsevier</em>, 2019. <a href="#" class="text-blue-500 hover:underline">[paper link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">The impact of a flooding disruption on the spatial distribution of commuter's income.</p>
+                        <p class="text-sm text-gray-600"><em>Journal of Environmental Economics and Policy, Taylor and Francis</em>, 2019. <a href="#" class="text-blue-500 hover:underline">[paper link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">The Spatial Impact of Commuting on Employment Income - A Spatial Microsimulation Approach.</p>
+                        <p class="text-sm text-gray-600"><em>Applied Spatial Analysis and Policy, Springer</em>, 2017. <a href="#" class="text-blue-500 hover:underline">[paper link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">Intertemporal Income in Ireland (1996-2011) - A Spatial Analysis.</p>
+                        <p class="text-sm text-gray-600"><em>International Journal of Microsimulation</em>, 2016. <a href="#" class="text-blue-500 hover:underline">[paper link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">Willingness to Pay for Achieving Good Status Across Rivers in the Republic of Ireland.</p>
+                        <p class="text-sm text-gray-600"><em>The Economic and Social Review</em>, 2016. <a href="#" class="text-blue-500 hover:underline">[paper link]</a></p>
+                    </li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2 class="section-title text-2xl font-bold text-gray-900 mb-6">Reports</h2>
+                <ul class="space-y-4">
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">Exploring missed mortgage payments in the first year of monetary tightening.</p>
+                        <p class="text-sm text-gray-600"><em>Financial Stability Note 9, Central Bank of Ireland</em>. <a href="#" class="text-blue-500 hover:underline">[link pdf]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">COSAINT: Cattle Exclusion from Watercourses: Environmental and Socio-economic Implications.</p>
+                        <p class="text-sm text-gray-600"><em>Environmental Protection Agency</em>. <a href="#" class="text-blue-500 hover:underline">[link pdf]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">Adaptive Responses to Climate Impacts (ARC): Costing the Impacts of Climate Change on the Irish Economy and Assessing the Options for Adaptation, with a Specific Focus on the Role of Key Stakeholders.</p>
+                        <p class="text-sm text-gray-600"><em>Environmental Protection Agency</em>. <a href="#" class="text-blue-500 hover:underline">[link pdf]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">Greening the Future: Policy Options for Greener Cities.</p>
+                        <p class="text-sm text-gray-600"><em>Institute of International and European Affairs</em>.</p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">The Local Impact of the Economic Recovery.</p>
+                        <p class="text-sm text-gray-600"><em>Teagasc</em>. <a href="#" class="text-blue-500 hover:underline">[link pdf]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">Willingness to Pay for Achieving Good Status Across Rivers in the Republic of Ireland.</p>
+                        <p class="text-sm text-gray-600"><em>Environmental Protection Agency</em>.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="section-title text-2xl font-bold text-gray-900 mb-6">Media & Other Contributions</h2>
+                <ul class="space-y-4">
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">"Most mortgages entering arrears of up to 3 months are trackers, research shows."</p>
+                        <p class="text-sm text-gray-600"><em>Robert Shortt, RTÉ</em>. <a href="#" class="text-blue-500 hover:underline">[page link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">"Creating a Farm Database for Policy Analysis."</p>
+                        <p class="text-sm text-gray-600"><em>Teagasc daily article</em>. <a href="#" class="text-blue-500 hover:underline">[page link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">"How the 'squeezed middle' gains from the value of home ownership."</p>
+                        <p class="text-sm text-gray-600"><em>Brendan Keenan, Irish Independent</em>. <a href="#" class="text-blue-500 hover:underline">[page link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">"Human health 'affected by cattle manure in rivers and streams."</p>
+                        <p class="text-sm text-gray-600"><em>Sean McCarthaigh, Irish Independent</em>. <a href="#" class="text-blue-500 hover:underline">[page link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">"The gap in household income in Dublin versus rural Ireland is widening."</p>
+                        <p class="text-sm text-gray-600"><em>Voices - Journal.ie</em>. <a href="#" class="text-blue-500 hover:underline">[page link]</a></p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="section-title text-2xl font-bold text-gray-900 mb-6">Dashboards & Repositories</h2>
+                <ul class="space-y-4">
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">Coming Soon</p>
+                        <a href="#" class="text-blue-500 hover:underline">placeholder-blog-link.com</a>
+                    </li>
+                   
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</main>
+
+<script>
+    // JavaScript for tab functionality
+    function showTab(tabId) {
+        const tabContents = document.querySelectorAll('#homeTabContent, #cvTabContent, #researchTabContent');
+        const tabButtons = document.querySelectorAll('.tab-button');
+
+        tabContents.forEach(content => {
+            content.classList.add('hidden');
+        });
+
+        tabButtons.forEach(button => {
+            button.classList.remove('active');
+        });
+
+        document.getElementById(tabId).classList.remove('hidden');
+        event.currentTarget.classList.add('active');
+    }
+</script>
 
 </body>
 </html>
+
