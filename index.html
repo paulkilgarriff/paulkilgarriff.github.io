@@ -9,11 +9,73 @@
     <meta property="og:title" content="Paul Kilgarriff, Ph.D. | Economist & Data Analyst">
     <meta property="og:description" content="Explore the work of Paul Kilgarriff, focusing on the intersection of economics, geography, and data science.">
     <meta property="og:type" content="website">
+
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
     
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        .container {
+            max-width: 80rem;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 70%;
+            height: 4px;
+            background-color: #3b82f6;
+            border-radius: 9999px;
+        }
+        .link-icon {
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.25rem;
+        }
+        ul.list-disc-inside li::marker {
+            color: #3b82f6;
+        }
+        .tab-button {
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            border-radius: 0.5rem 0.5rem 0 0;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            color: #4b5563;
+        }
+        .tab-button.active {
+            background-color: #fff;
+            color: #1f2937;
+            border-bottom: 4px solid #3b82f6;
+        }
+        .tab-button:not(.active):hover {
+            background-color: #e5e7eb;
+        }
+        ul.no-style {
+            list-style: none;
+            padding-left: 0;
+        }
+        .tab-content {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .tab-content:not(.hidden) {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 flex justify-center py-10">
 
@@ -44,7 +106,7 @@
         <button role="tab" aria-selected="false" aria-controls="cvTabContent" id="cvTabButton" class="tab-button">CV</button>
         <button role="tab" aria-selected="false" aria-controls="researchTabContent" id="researchTabButton" class="tab-button">Research</button>
         <button role="tab" aria-selected="false" aria-controls="dashboardsTabContent" id="dashboardsTabButton" class="tab-button">Dashboards</button>
-        </div>
+    </div>
 
     <div role="tabpanel" id="homeTabContent" aria-labelledby="homeTabButton" class="tab-content">
         <div class="space-y-8">
@@ -80,20 +142,190 @@
     </div>
 
     <div role="tabpanel" id="cvTabContent" aria-labelledby="cvTabButton" class="tab-content hidden">
+         <div class="grid lg:grid-cols-3 gap-8">
+            <aside class="lg:col-span-1 space-y-8">
+                <section>
+                    <h2 class="section-title text-xl font-bold text-gray-900 mb-4">About Me</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        I am an economist with an interdisciplinary background in economics and geography, bringing a proven track record in research, policy analysis, and financial resilience. As Principal Investigator, I secured €554k in funding to lead a project on the impacts of teleworking on commuting patterns and housing prices across European cities. In 2022 I was awarded the Barrington Medal by the Statistical and Social Inquiry Society of Ireland for my paper on "Price, Size and Density: Dublin housing in an EU context". My work is driven by a commitment to using robust data insights to inform policy and economic strategy in complex, evolving environments.
+                    </p>
+                </section>
+                <section>
+                    <h2 class="section-title text-xl font-bold text-gray-900 mb-4">Strengths</h2>
+                    <ul class="list-disc-inside text-gray-700 columns-2 md:columns-3 lg:columns-2">
+                        <li>Problem solving</li>
+                        <li>Learning</li>
+                        <li>Data Communication</li>
+                        <li>Leadership</li>
+                        <li>Planning</li>
+                        <li>Attention to detail</li>
+                        <li>Project management</li>
+                        <li>Grant writing</li>
+                        <li>Time management</li>
+                        <li>Team work</li>
+                        <li>Writing</li>
+                        <li>Policy</li>
+                        <li>Spatial</li>
+                        <li>Research</li>
+                        <li>Innovation</li>
+                        <li>Interdisciplinary</li>
+                        <li>Optimistic</li>
+                        <li>Enthusiastic</li>
+                        <li>Positive</li>
+                        <li>Adaptable</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2 class="section-title text-xl font-bold text-gray-900 mb-4">Technical Skills</h2>
+                    <ul class="list-disc-inside text-gray-700 columns-2 md:columns-3 lg:columns-2">
+                        <li>R, STATA</li>
+                        <li>ArcGIS, QGIS</li>
+                        <li>Python, Excel, Access</li>
+                        <li>LaTeX</li>
+                        <li>Web scraping, SQL</li>
+                        <li>Spatial analysis, Mapping</li>
+                        <li>Machine learning, NLP</li>
+                        <li>Data visualization</li>
+                        <li>Network analysis</li>
+                        <li>Spatial regression</li>
+                        <li>Big Data, Clustering</li>
+                        <li>Text Mining</li>
+                        <li>APIs (Google, OpenAI)</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2 class="section-title text-xl font-bold text-gray-900 mb-4">Languages</h2>
+                    <ul class="no-style text-gray-700 space-y-2">
+                        <li><span class="font-semibold text-gray-900">English:</span> Native</li>
+                        <li><span class="font-semibold text-gray-900">French:</span> Basic / A2.2</li>
+                    </ul>
+                </section>
+            </aside>
+            <div class="lg:col-span-2 space-y-12">
+                <section>
+                    <h2 class="section-title text-2xl font-bold text-gray-900 mb-6">Experience</h2>
+                    <ul class="space-y-6">
+                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-gray-800">Economist | Macro-Financial Division | Central Bank of Ireland</h3>
+                                <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Sept. 2023 - Present</span>
+                            </div>
+                            <p class="text-gray-600 mb-2">Dublin, Ireland</p>
+                            <ul class="list-disc-inside text-gray-700 space-y-1">
+                                <li>Economist working in the area of financial resilience and research.</li>
+                                <li>Leading internal research and analysis of residential loan level data.</li>
+                                <li>Active member of the ECB's expert group on climate physical risks, collaborating on initiatives to assess and mitigate climate-related financial risks.</li>
+                                <li>Contribute to publication of the Financial Stability Review.</li>
+                                <li>Provide input to management in relation to housing, affordability and mortgage book.</li>
+                            </ul>
+                        </li>
+                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-gray-800">Principal Investigator | Urban Mobility and Development | Luxembourg Institute of Socio-Economic Research</h3>
+                                <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Sept. 2022 - Aug. 2023</span>
+                            </div>
+                            <p class="text-gray-600 mb-2">Belval, Luxembourg</p>
+                            <ul class="list-disc-inside text-gray-700 space-y-1">
+                                <li>PI on a €554k project TELE-SIM.</li>
+                                <li>Researched the local impact on teleworking on 500 European cities.</li>
+                                <li>Modelling house prices for several countries and over 500 cities.</li>
+                                <li>Linking city size effects and rent price gradients.</li>
+                                <li>Estimating commuting costs across 500 cities.</li>
+                                <li>Lead scientific contact for the department research seminar series. Contributed in receiving €30k for the series and also inviting high-profile speakers.</li>
+                            </ul>
+                        </li>
+                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-gray-800">Economic Consultant | Organisation for Economic Co-operation and Development (OECD)</h3>
+                                <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Oct. 2021 - Dec. 2022</span>
+                            </div>
+                            <p class="text-gray-600 mb-2">Paris, France</p>
+                            <ul class="list-disc-inside text-gray-700 space-y-1">
+                                <li>Utilised big data to estimate risk preferences to natural disasters in Asia.</li>
+                                <li>Used web-scraping to build a large scale database of over 5 million news articles.</li>
+                                <li>Performed text mining and sentiment analysis to examine the severity of natural disasters.</li>
+                                <li>Created a methodology to allow for a fast estimate on economic damages from a natural disaster using a text mining and sentiment analysis approach.</li>
+                                <li>Future research project to examine the socio-demographics of natural disasters in the region of south Asia.</li>
+                            </ul>
+                        </li>
+                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-gray-800">Economist | Glenveagh Properties Plc.</h3>
+                                <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Sept. 2021 - June 2022</span>
+                            </div>
+                            <p class="text-gray-600 mb-2">Maynooth, Co. Kildare, Ireland</p>
+                            <ul class="list-disc-inside text-gray-700 space-y-1">
+                                <li>Worked as part of the planning team with a particular focus on future planning and demographics.</li>
+                                <li>Contributed to analysis examining compact growth and housing viability.</li>
+                                <li>Produced research for management on the future housing needs and demographic projections to 2040.</li>
+                                <li>Conducted a detailed analysis of service provision for 800 Irish settlements.</li>
+                                <li>Examined the spatial viability of different housing typologies.</li>
+                                <li>Produced a dashboard for the acquisitions team in relation to affordability and incomes by area.</li>
+                                <li>Contributed to internal reports and documents with a focus on hedonic prices of property.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2 class="section-title text-2xl font-bold text-gray-900 mb-6">Education</h2>
+                    <ul class="space-y-6">
+                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-gray-800">Ph.D. Geocomputation | Maynooth University</h3>
+                                <span class="text-sm text-gray-500 font-medium whitespace-now-wrap">Sept. 2013 - Nov. 2017</span>
+                            </div>
+                            <p class="text-gray-600 mb-2">Maynooth, Ireland</p>
+                            <p class="text-gray-700 leading-relaxed italic">Title: "The spatial distribution of welfare in Ireland"</p>
+                            <ul class="list-disc-inside text-gray-700 mt-2 space-y-1">
+                                <li>Economics, geography, data analysis, GIS.</li>
+                                <li>Created economic models to examine income, inequality, housing and commuting across Ireland.</li>
+                                <li>Simulated income, housing costs and benefits at the individual and household level.</li>
+                                <li>Performed network analysis to calculate travel and journey times for 3,440 areas.</li>
+                            </ul>
+                        </li>
+                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-gray-800">M.Econ.Sc. | National University of Ireland, Galway</h3>
+                                <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Aug. 2010 - Aug. 2011</span>
+                            </div>
+                            <p class="text-gray-600 mb-2">Galway, Ireland</p>
+                            <ul class="list-disc-inside text-gray-700 space-y-1">
+                                <li>Result 1.1</li>
+                                <li>Microeconomics, macroeconomics, game theory, econometrics, economic thought.</li>
+                            </ul>
+                        </li>
+                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-bold text-lg text-gray-800">B.Comm | National University of Ireland, Galway</h3>
+                                <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Sept. 2007 - May 2010</span>
+                            </div>
+                            <p class="text-gray-600 mb-2">Galway, Ireland</p>
+                            <ul class="list-disc-inside text-gray-700 space-y-1">
+                                <li>Microeconomics, macroeconomics, game theory, econometrics, marketing.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </div>
         </div>
+    </div>
 
     <div role="tabpanel" id="researchTabContent" aria-labelledby="researchTabButton" class="tab-content hidden">
         <div class="space-y-12">
             <section>
                 <h2 class="section-title text-2xl font-bold text-gray-900 mb-6">Peer-reviewed Publications</h2>
-                </section>
-            <section>
-                <h2 class="section-title text-2xl font-bold text-gray-900 mb-6">Reports</h2>
-                </section>
-            <section>
-                <h2 class="section-title text-2xl font-bold text-gray-900 mb-6">Media & Other Contributions</h2>
-                </section>
-            </div>
+                <ul class="space-y-4">
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">Evaluating cropping intensity in registered and unregistered farms: Evidence from Kenya.</p>
+                        <p class="text-sm text-gray-600"><em>Remote Sensing Applications: Society and Environment</em>, 2024. <a href="#" class="text-blue-500 hover:underline">[paper link]</a></p>
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <p class="font-semibold text-gray-800">The scaling of urban land and density profiles.</p>
+                        <p class="text-sm text-gray-600"><em>Journal Urban Scaling: Allometry in Urban Studies and Spatial Science</em>, 2024. <a href="https://www.taylorfrancis.com/chapters/edit/10.4324/9781003288312-29/scaling-urban-land-density-profiles-geoffrey-caruso-paul-kilgarriff-justin-delloye-r%C3%A9mi-lemoy" class="text-blue-500 hover:underline">[paper link]</a></p>
+                    </li>
+                </ul>
+            </section>
+        </div>
     </div>
 
     <div role="tabpanel" id="dashboardsTabContent" aria-labelledby="dashboardsTabButton" class="tab-content hidden">
@@ -113,12 +345,59 @@
             </section>
         </div>
     </div>
+
     <div class="mt-12 pt-6 border-t-2 border-gray-200 text-center text-gray-500 text-sm">
         <p>This website is designed to make my research accessible. The views expressed are my own and do not necessarily represent the views of my employer.</p>
     </div>
 </main>
 
-<script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Tab functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetContentId = button.getAttribute('aria-controls');
+
+                // Deactivate all buttons and hide all content
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-selected', 'false');
+                });
+                tabContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+
+                // Activate the clicked button and show its content
+                button.classList.add('active');
+                button.setAttribute('aria-selected', 'true');
+                document.getElementById(targetContentId).classList.remove('hidden');
+            });
+        });
+
+        // Email revealer functionality
+        const emailLink = document.getElementById('email-link');
+        if (emailLink) {
+            emailLink.addEventListener('click', (event) => {
+                // Check if the email is already revealed to prevent navigation
+                if (emailLink.href.startsWith('mailto:')) {
+                    return;
+                }
+                event.preventDefault(); 
+                
+                const part1 = 'p.kilgarriff1';
+                const part2 = '@';
+                const part3 = 'gmail.com';
+                const fullEmail = part1 + part2 + part3;
+                
+                emailLink.href = 'mailto:' + fullEmail;
+                emailLink.innerText = fullEmail;
+            });
+        }
+    });
+</script>
 
 </body>
 </html>
