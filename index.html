@@ -108,6 +108,7 @@
         <button role="tab" aria-selected="false" aria-controls="dashboardsTabContent" id="dashboardsTabButton" class="tab-button">Dashboards</button>
     </div>
 
+    <!-- HOME TAB -->
     <div role="tabpanel" id="homeTabContent" aria-labelledby="homeTabButton" class="tab-content">
         <div class="space-y-8">
             <section>
@@ -141,175 +142,33 @@
         </div>
     </div>
 
+    <!-- CV TAB (UPDATED TO EMBED PDF) -->
     <div role="tabpanel" id="cvTabContent" aria-labelledby="cvTabButton" class="tab-content hidden">
-         <div class="grid lg:grid-cols-3 gap-8">
-            <aside class="lg:col-span-1 space-y-8">
-                <section>
-                    <h2 class="section-title text-xl font-bold text-gray-900 mb-4">About Me</h2>
-                    <p class="text-gray-700 leading-relaxed">
-                        I am an economist with an interdisciplinary background in economics and geography, bringing a proven track record in research, policy analysis, and financial resilience. As Principal Investigator, I secured €554k in funding to lead a project on the impacts of teleworking on commuting patterns and housing prices across European cities. In 2022 I was awarded the Barrington Medal by the Statistical and Social Inquiry Society of Ireland for my paper on "Price, Size and Density: Dublin housing in an EU context". My work is driven by a commitment to using robust data insights to inform policy and economic strategy in complex, evolving environments.
+        <div class="space-y-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                <h2 class="section-title text-2xl font-bold text-gray-900 mb-4 sm:mb-0">Curriculum Vitae</h2>
+                <a href="Paul_Kilgarriff_CV.pdf" download class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded shadow-md transition-colors flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    Download PDF
+                </a>
+            </div>
+            
+            <div class="w-full h-[85vh] min-h-[800px] bg-gray-50 p-2 rounded-lg shadow-inner border border-gray-200">
+                <!-- IMPORTANT: Change "Paul_Kilgarriff_CV.pdf" below to your actual file name -->
+                <iframe 
+                    class="w-full h-full border-0 rounded" 
+                    src="Paul_Kilgarriff_CV.pdf" 
+                    title="Paul Kilgarriff Curriculum Vitae">
+                    <p class="text-center mt-10 text-gray-600">
+                        It appears your web browser doesn't support iframes or PDF rendering. <br><br>
+                        <a href="Paul_Kilgarriff_CV.pdf" class="text-blue-600 font-semibold hover:underline">Click here to download the PDF</a>.
                     </p>
-                </section>
-                <section>
-                    <h2 class="section-title text-xl font-bold text-gray-900 mb-4">Strengths</h2>
-                    <ul class="list-disc-inside text-gray-700 columns-2 md:columns-3 lg:columns-2">
-                        <li>Problem solving</li>
-                        <li>Learning</li>
-                        <li>Data Communication</li>
-                        <li>Leadership</li>
-                        <li>Planning</li>
-                        <li>Attention to detail</li>
-                        <li>Project management</li>
-                        <li>Grant writing</li>
-                        <li>Time management</li>
-                        <li>Team work</li>
-                        <li>Writing</li>
-                        <li>Policy</li>
-                        <li>Spatial</li>
-                        <li>Research</li>
-                        <li>Innovation</li>
-                        <li>Interdisciplinary</li>
-                        <li>Optimistic</li>
-                        <li>Enthusiastic</li>
-                        <li>Positive</li>
-                        <li>Adaptable</li>
-                    </ul>
-                </section>
-                <section>
-                    <h2 class="section-title text-xl font-bold text-gray-900 mb-4">Technical Skills</h2>
-                    <ul class="list-disc-inside text-gray-700 columns-2 md:columns-3 lg:columns-2">
-                        <li>R, STATA</li>
-                        <li>ArcGIS, QGIS</li>
-                        <li>Python, Excel, Access</li>
-                        <li>LaTeX</li>
-                        <li>Web scraping, SQL</li>
-                        <li>Spatial analysis, Mapping</li>
-                        <li>Machine learning, NLP</li>
-                        <li>Data visualization</li>
-                        <li>Network analysis</li>
-                        <li>Spatial regression</li>
-                        <li>Big Data, Clustering</li>
-                        <li>Text Mining</li>
-                        <li>APIs (Google, OpenAI)</li>
-                    </ul>
-                </section>
-                <section>
-                    <h2 class="section-title text-xl font-bold text-gray-900 mb-4">Languages</h2>
-                    <ul class="no-style text-gray-700 space-y-2">
-                        <li><span class="font-semibold text-gray-900">English:</span> Native</li>
-                        <li><span class="font-semibold text-gray-900">French:</span> Basic / A2.2</li>
-                    </ul>
-                </section>
-            </aside>
-            <div class="lg:col-span-2 space-y-12">
-                <section>
-                    <h2 class="section-title text-2xl font-bold text-gray-900 mb-6">Experience</h2>
-                    <ul class="space-y-6">
-                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="font-bold text-lg text-gray-800">Economist | Macro-Financial Division | Central Bank of Ireland</h3>
-                                <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Sept. 2023 - Present</span>
-                            </div>
-                            <p class="text-gray-600 mb-2">Dublin, Ireland</p>
-                            <ul class="list-disc-inside text-gray-700 space-y-1">
-                                <li>Economist working in the area of financial resilience and research.</li>
-                                <li>Leading internal research and analysis of residential loan level data.</li>
-                                <li>Active member of the ECB's expert group on climate physical risks, collaborating on initiatives to assess and mitigate climate-related financial risks.</li>
-                                <li>Contribute to publication of the Financial Stability Review.</li>
-                                <li>Provide input to management in relation to housing, affordability and mortgage book.</li>
-                            </ul>
-                        </li>
-                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="font-bold text-lg text-gray-800">Principal Investigator | Urban Mobility and Development | Luxembourg Institute of Socio-Economic Research</h3>
-                                <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Sept. 2022 - Aug. 2023</span>
-                            </div>
-                            <p class="text-gray-600 mb-2">Belval, Luxembourg</p>
-                            <ul class="list-disc-inside text-gray-700 space-y-1">
-                                <li>PI on a €554k project TELE-SIM.</li>
-                                <li>Researched the local impact on teleworking on 500 European cities.</li>
-                                <li>Modelling house prices for several countries and over 500 cities.</li>
-                                <li>Linking city size effects and rent price gradients.</li>
-                                <li>Estimating commuting costs across 500 cities.</li>
-                                <li>Lead scientific contact for the department research seminar series. Contributed in receiving €30k for the series and also inviting high-profile speakers.</li>
-                            </ul>
-                        </li>
-                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="font-bold text-lg text-gray-800">Economic Consultant | Organisation for Economic Co-operation and Development (OECD)</h3>
-                                <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Oct. 2021 - Dec. 2022</span>
-                            </div>
-                            <p class="text-gray-600 mb-2">Paris, France</p>
-                            <ul class="list-disc-inside text-gray-700 space-y-1">
-                                <li>Utilised big data to estimate risk preferences to natural disasters in Asia.</li>
-                                <li>Used web-scraping to build a large scale database of over 5 million news articles.</li>
-                                <li>Performed text mining and sentiment analysis to examine the severity of natural disasters.</li>
-                                <li>Created a methodology to allow for a fast estimate on economic damages from a natural disaster using a text mining and sentiment analysis approach.</li>
-                                <li>Future research project to examine the socio-demographics of natural disasters in the region of south Asia.</li>
-                            </ul>
-                        </li>
-                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="font-bold text-lg text-gray-800">Economist | Glenveagh Properties Plc.</h3>
-                                <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Sept. 2021 - June 2022</span>
-                            </div>
-                            <p class="text-gray-600 mb-2">Maynooth, Co. Kildare, Ireland</p>
-                            <ul class="list-disc-inside text-gray-700 space-y-1">
-                                <li>Worked as part of the planning team with a particular focus on future planning and demographics.</li>
-                                <li>Contributed to analysis examining compact growth and housing viability.</li>
-                                <li>Produced research for management on the future housing needs and demographic projections to 2040.</li>
-                                <li>Conducted a detailed analysis of service provision for 800 Irish settlements.</li>
-                                <li>Examined the spatial viability of different housing typologies.</li>
-                                <li>Produced a dashboard for the acquisitions team in relation to affordability and incomes by area.</li>
-                                <li>Contributed to internal reports and documents with a focus on hedonic prices of property.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-                <section>
-                    <h2 class="section-title text-2xl font-bold text-gray-900 mb-6">Education</h2>
-                    <ul class="space-y-6">
-                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="font-bold text-lg text-gray-800">Ph.D. Geocomputation | Maynooth University</h3>
-                                <span class="text-sm text-gray-500 font-medium whitespace-now-wrap">Sept. 2013 - Nov. 2017</span>
-                            </div>
-                            <p class="text-gray-600 mb-2">Maynooth, Ireland</p>
-                            <p class="text-gray-700 leading-relaxed italic">Title: "The spatial distribution of welfare in Ireland"</p>
-                            <ul class="list-disc-inside text-gray-700 mt-2 space-y-1">
-                                <li>Economics, geography, data analysis, GIS.</li>
-                                <li>Created economic models to examine income, inequality, housing and commuting across Ireland.</li>
-                                <li>Simulated income, housing costs and benefits at the individual and household level.</li>
-                                <li>Performed network analysis to calculate travel and journey times for 3,440 areas.</li>
-                            </ul>
-                        </li>
-                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="font-bold text-lg text-gray-800">M.Econ.Sc. | National University of Ireland, Galway</h3>
-                                <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Aug. 2010 - Aug. 2011</span>
-                            </div>
-                            <p class="text-gray-600 mb-2">Galway, Ireland</p>
-                            <ul class="list-disc-inside text-gray-700 space-y-1">
-                                <li>Result 1.1</li>
-                                <li>Microeconomics, macroeconomics, game theory, econometrics, economic thought.</li>
-                            </ul>
-                        </li>
-                        <li class="bg-gray-50 p-6 rounded-lg shadow-sm">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="font-bold text-lg text-gray-800">B.Comm | National University of Ireland, Galway</h3>
-                                <span class="text-sm text-gray-500 font-medium whitespace-nowrap">Sept. 2007 - May 2010</span>
-                            </div>
-                            <p class="text-gray-600 mb-2">Galway, Ireland</p>
-                            <ul class="list-disc-inside text-gray-700 space-y-1">
-                                <li>Microeconomics, macroeconomics, game theory, econometrics, marketing.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
+                </iframe>
             </div>
         </div>
     </div>
 
+    <!-- RESEARCH TAB -->
     <div role="tabpanel" id="researchTabContent" aria-labelledby="researchTabButton" class="tab-content hidden">
         <div class="space-y-12">
             <section>
@@ -384,6 +243,7 @@
         </div>
     </div>
 
+    <!-- DASHBOARDS TAB -->
     <div role="tabpanel" id="dashboardsTabContent" aria-labelledby="dashboardsTabButton" class="tab-content hidden">
         <div class="space-y-8">
             <section>
